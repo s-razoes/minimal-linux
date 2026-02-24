@@ -87,6 +87,18 @@ Enter command: [PASTE YOUR COMMAND HERE]
 - **Default proxy**: `127.0.0.1:8080` (configured for Burp Suite)
 - **Desktop environment**: XFCE4
 
+### To set the proxy in chrome execute the command
+```bash
+sudo mkdir -p "/etc/opt/chrome/policies/managed"
+sudo tee "/etc/opt/chrome/policies/managed/proxy.json" > /dev/null <<EOF
+{
+  "ProxyMode": "fixed_servers",
+  "ProxyServer": "127.0.0.1:8080",
+  "ProxyBypassList": "localhost,127.0.0.1"
+}
+EOF
+```
+
 ## What happens during execution
 
 1. ✅ Authorization code extraction

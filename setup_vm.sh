@@ -165,7 +165,7 @@ echo "done."
 #  sudo tee ${CHROME_POLICY_DIR}/proxy.json > /dev/null <<EOF
 #{
 #  "ProxyMode": "fixed_servers",
-#  "ProxyServer": "${IP_ADDRESS}:${PORT}",
+#  "ProxyServer": "localhost:127.0.0.1",
 #  "ProxyBypassList": "localhost,127.0.0.1"
 #}
 #EOF
